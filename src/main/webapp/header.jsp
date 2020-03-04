@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!doctype html>
 <html lang="en">
 <head>
 <!-- Required meta tags -->
@@ -15,6 +16,6 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 
-<title>Servlet_App_0</title>
+<title>CRUD App</title>
 </head>
 <body class="mt-30">

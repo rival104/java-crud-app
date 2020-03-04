@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp"%>
 
 <div class="container">
@@ -32,7 +31,7 @@
       			</c:forEach>
 			</tbody>
 		</table>
-		<a class="btn btn-secondary" href="index.html" role="button">Go Back</a>
+		<a class="btn btn-secondary" href="index.jsp" role="button">Go Back</a>
 		
 	</div>
 

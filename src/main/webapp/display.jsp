@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp"%>
 
 <div class="container">
@@ -36,7 +35,7 @@
 
 			</tbody>
 		</table>
-		<a class="btn btn-secondary" href="select.html" role="button">Go
+		<a class="btn btn-secondary" href="select.jsp" role="button">Go
 			Back</a>
 	</div>
 
