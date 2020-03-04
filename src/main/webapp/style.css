@@ -11,3 +11,7 @@ body,html {
 .min-w {
 	min-width:400px;
 }
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: #33B5E5;
+}

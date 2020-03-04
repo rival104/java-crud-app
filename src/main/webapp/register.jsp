@@ -1,5 +1,18 @@
 <%@ include file="header.jsp"%>
-
+<c:if test="${!isLoggedIn}">
+	<div class="row justify-content-center">
+		<div class="alert alert-danger alert-dismissible fade show"
+			role="alert">
+			<strong>Error need to login first</strong> <a href="login.html">click
+				here</a> to login.
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	</div>
+</c:if>
+<c:if test="${isLoggedIn}">
 	<div class="container">
 		<c:if test="${isRegistered}">
 			 <div class="row justify-content-center">
@@ -74,5 +87,5 @@
 		</div>
 
 	</div>
-
+</c:if>
 <%@ include file="footer.jsp"%>
