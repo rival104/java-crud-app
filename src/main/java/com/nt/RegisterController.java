@@ -13,30 +13,24 @@ import com.nt.dao.EmpDao;
 
 public class RegisterController extends HttpServlet{
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		
-		PrintWriter pw = res.getWriter();
-		res.setContentType("text/html");
+	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {	
 		try {
 			int id = Integer.parseInt(req.getParameter("id"));
 			String name = req.getParameter("name");
 			int sal = Integer.parseInt(req.getParameter("sal"));
 			boolean isAdded = EmpDao.add(id, name, sal);
-			
 			if(isAdded) {
-				pw.write("<h2> Employee added successfully </h2>");
-				pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
-				return;
+				RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
+				req.setAttribute("isRegistered", isAdded);
+				rd.forward(req, res);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Something went wrong: "+e.getMessage());
 		}
 	
-		pw.write("<h2 style='color:red;'>Error adding employees!!</h2>");
-		pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
-		
-		pw.close();
-
+		RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
+		req.setAttribute("hasError", true);
+		rd.forward(req, res);
 	}
 	
 

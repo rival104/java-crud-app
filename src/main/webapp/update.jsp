@@ -1,5 +1,31 @@
 <%@ include file="header.jsp"%>
 	<div class="container">
+		<c:if test="${isUpdated}">
+			 <div class="row justify-content-center">
+					<div class="alert alert-success alert-dismissible fade show"
+						role="alert">
+						<strong>Updated successfully!</strong>  <a href="viewAll">click here</a> to view employees
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+		</c:if>
+		
+		<c:if test="${hasError}">
+			 <div class="row justify-content-center">
+					<div class="alert alert-danger alert-dismissible fade show"
+						role="alert">
+						<strong>Error updating employee! </strong> check input and try again.
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+		</c:if>
+		
 		<div class="row justify-content-center">
 			<!--Custom Material form -->
 			<div class="card min-w">
