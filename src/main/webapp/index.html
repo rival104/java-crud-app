@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="styesheet" href="style.css">
+
+<title>Servlet_App_0</title>
+</head>
+<body style="margin-top: 20px;">
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1 class="display-4">Employee CRUD Function</h1>
+				<p class="lead">This is a simple JAVA Servlet Web Application that utilizes Create, Update, Delete, Select (Read) operation on my sql database  in a MVC architecture.</p>
+				<hr class="my-4">
+				<p>It perform the following functions the performs the operation in a database.</p>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="card text-white bg-primary mb-3">
+							<div class="card-body">
+								<h5 class="card-title">View All Employees</h5>
+								<p class="card-text">Uses SQL queries using MySql Driver manger to get all employees as a list Object</p>
+								<a href="viewAll" class="btn btn-dark">View All</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="card text-white bg-success mb-3">
+							<div class="card-body">
+								<h5 class="card-title">View Selected Employee</h5>
+								<p class="card-text">Uses SQL queries find particular employee using ID.</p>
+								<a href="select.html" class="btn btn-dark">Select</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+						<div class="col-sm-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Register an Employee</h5>
+								<p class="card-text">Uses SQL INSERT non-select query to register a new employee.</p>
+								<a href="register.html" class="btn btn-success">Register</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Update an Employee</h5>
+								<p class="card-text">Uses SQL UPDATE non-select query to update employee salary.</p>
+								<a href="update.jsp" class="btn btn-warning">Update</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Delete an Employee</h5>
+								<p class="card-text">Uses SQL DELETE non-select query to delete a new employee using ID.</p>
+								<a href="delete.html" class="btn btn-danger">Delete</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>
