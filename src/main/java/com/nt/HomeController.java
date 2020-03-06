@@ -12,16 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 public class HomeController extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) {
-			
-		
-			Cookie[] ck = req.getCookies();
 			String loginCookie = null;
-			for(Cookie c: ck) {
-				String key = c.getName();
-				if(key.equals("login")) {
-					loginCookie = c.getValue();
+			try {
+				Cookie[] ck = req.getCookies();
+				for(Cookie c: ck) {
+					String key = c.getName();
+					if(key.equals("login")) {
+						loginCookie = c.getValue();
+					}
 				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
+			
 			
 			try {
 				if(loginCookie != null && !loginCookie.isEmpty()) {
