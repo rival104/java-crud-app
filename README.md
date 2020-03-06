@@ -1,18 +1,18 @@
 # Java-crud-app
 ![intial screen for Java-crud-app](readme-img/main-page2.png)
 
-##Description
+## Description
 This is Java Servlet Web Application that utilizes CRUD operations on sql database in MVC structure.
 
 **note: can login using same name and pass. not fully configured.
-##Install and Run:
+## Install and Run:
 To run this app in eclipse EE:
 - `File` -> Open project from file system
 - Select the `java-crud-app.zip`
 - Right Click on project -> `Run As` -> `Run on Server`.
 - It was tested on `apache tomcat 8.5`
 
-##Functionality
+## Functionality
 This application enables the user to:
 - Display all the data in table
 - Register new record in database
