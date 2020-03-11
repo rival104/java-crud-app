@@ -23,9 +23,9 @@ This application enables the user to:
 
 ## External JAR Used
 Can be found in pom.xml
-- Servlet-API - TO use servlet app
-- MYSQL Driver - To communicate with mysql database
-- JSTL 1.2 - for jsp expressions
+- Servlet-API - To use servlet app.
+- MYSQL Driver - To communicate with MYSQL database.
+- JSTL 1.2 - For jsp expressions.
 
 
 ## Developer Notes
@@ -43,7 +43,7 @@ Table name: emp.
 |---|---|----|
 |101|Sam|1000||
 
-###Database and table creation(SQL):
+### Database and table creation(SQL):
 ```
 CREATE SCHEMA `employee` ;
 ```
@@ -69,4 +69,5 @@ CREATE TABLE `emp` (
 - Added error handling for invalid input
 - Used Maven to create project.
 - Added `login` ability.
-- added login and user management using session and cookies.
+- added login and user management using `session` and cookies.
+- added `filter` to \home route 

@@ -15,6 +15,7 @@ public class LogoutController extends HttpServlet{
 		Cookie ck = new Cookie("login",null);
 		res.addCookie(ck);
 		req.getSession().invalidate();
+		LoginController.setLoggedIn(false);
 		
 //		//get a particular cookie
 //		Cookie[] ck = req.getCookies();

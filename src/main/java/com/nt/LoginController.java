@@ -1,15 +1,16 @@
 package com.nt;
 
-import java.io.IOException;
+
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class LoginController extends HttpServlet{
+	private static boolean loggedIn = false;
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) {
 		String username = req.getParameter("user");
@@ -20,6 +21,9 @@ public class LoginController extends HttpServlet{
 				req.getSession().setAttribute("user", username);
 				req.getSession().setAttribute("isLoggedIn", true);
 				res.addCookie(ck);
+				
+				loggedIn = true;
+				
 				RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 				rd.forward(req, res);
 			}else{
@@ -30,10 +34,14 @@ public class LoginController extends HttpServlet{
 			e.printStackTrace();
 		}
 		
-		
+	}
 	
-		
-		
+	public static boolean getLoggedIn() {
+		return loggedIn;
+	}
+	
+	public static void setLoggedIn(boolean log) {
+		loggedIn = log;
 	}
 
 }

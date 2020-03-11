@@ -17,6 +17,15 @@
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	
+	<filter>
+		<filter-name>hmfl</filter-name>
+		<filter-class>com.nt.HomeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>hmfl</filter-name>
+		<url-pattern>/home</url-pattern>
+	</filter-mapping>
+	
 	<servlet>
 		<servlet-name>login</servlet-name>
 		<servlet-class>com.nt.LoginController</servlet-class>
